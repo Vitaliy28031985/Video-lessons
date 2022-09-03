@@ -1,35 +1,39 @@
+
+import { useSelector } from 'react-redux';
 import s from './VideoList.module.css';
 import {useDeleteVideoMutation, useGetVideosQuery} from '../../../redux/videoSlice';
+import {getFilterList} from '../../../redux/selectors';
 
 export const VideoList = () => {
 
 
 const {data: videos} = useGetVideosQuery();
 const [deleteVideo] = useDeleteVideoMutation();
-
+const filter = useSelector(getFilterList);
 const onDeleteVideo = id => deleteVideo(id);
 
-console.log(videos);
 
-
+const normalizeFilter = filter.toLowerCase();
+const filteredVideos =  videos.filter(video =>
+    video.title.toLowerCase().includes(normalizeFilter));
 
     return (
         <div>
     <ul className={s.listConteiner}>
-     {videos.map(({link, title}) => (<li className={s.listEl}>
+     {videos && filteredVideos.map(({id, link, title}) => 
+     (<li 
+     key={id} 
+     id={id}
+     className={s.listEl}>
     <div className={s.cartConteiner}>
     <iframe 
     className={s.cartVideo}
-    width="260"
     src={link}
-    title="YouTube video player"
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe>
+    frameborder="1"></iframe>
     <div className={s.cartConteinerTitle}>
     <p className={s.cartTitle}>{title}</p>
     <button className={s.cartButton} 
-    onClick={onDeleteVideo}
+    onClick={() => onDeleteVideo(id)}
     type="button">
     X</button>
     </div>
