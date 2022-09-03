@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import {useGetVideosQuery, useAddVideoMutation} from '../../../redux/videoSlice';
 
 import s from './VideoModal.module.css';
 
@@ -7,6 +8,8 @@ export const VideoModal = ({onClose}) => {
   const [link, setLink] = useState('');
   const [title, setTitle] = useState('');
 
+  const [addVideo] = useAddVideoMutation();
+  const {data: videos} = useGetVideosQuery();
   
 
     useEffect(() => {
@@ -46,6 +49,23 @@ export const VideoModal = ({onClose}) => {
 const handleBackdropSubmit = e => {
     e.preventDefault();
 
+   
+    if (videos.find(video => video.link === link)) {
+      alert(`Посилання на відео: ${link} вже існує.`);
+      setLink('');
+      setTitle('');
+         return;
+       }
+       if (videos.find(video => video.title === title)) {
+        alert(`Заголовок для відео: ${title} вже існує.`);
+        setLink('');
+        setTitle('');
+           return;
+         }
+  
+         addVideo({link, title});
+         setLink('');
+         setTitle('');
 
     onClose();
 };

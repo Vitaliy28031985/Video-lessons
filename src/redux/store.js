@@ -1,14 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-// import { contactsApi } from './contactsSlice';
-import {filter} from './reducerss';
+import { videosApi } from './videoSlice';
+import {filter} from './reducers';
 
 export const store = configureStore({
   reducer: {
-    [contactsApi.reducerPath]: contactsApi.reducer,
+    [videosApi.reducerPath]: videosApi.reducer,
     filter,
   },
   middleware: getDefaultMiddleware => [
     ...getDefaultMiddleware(),
-    contactsApi.middleware,
+    videosApi.middleware,
   ],
 });
