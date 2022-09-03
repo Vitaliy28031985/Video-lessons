@@ -23,12 +23,17 @@ img {
     flex-wrap: wrap;
     margin-bottom: -30px;
     margin-left: -30px;
+    padding-bottom: 20px;
 }
 
 .listEl {
     margin-left: 30px;
     margin-bottom: 30px;
     flex-basis: calc((100% - 90px) / 3);
+}
+.conteiner {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .cartConteiner {
@@ -71,4 +76,9 @@ img {
     .cartButton:hover, .cartButton:focus {
         background-color: azure;  
         color: red;
+    }
+
+    .affte {
+        border-top: 1px solid black;;
+        padding: 20px;  
     }

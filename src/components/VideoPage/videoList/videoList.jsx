@@ -18,7 +18,8 @@ const filteredVideos =  videos.filter(video =>
     video.title.toLowerCase().includes(normalizeFilter));
 
     return (
-        <div>
+        <>
+        <div className={s.conteiner}>
     <ul className={s.listConteiner}>
      {videos && filteredVideos.map(({id, link, title}) => 
      (<li 
@@ -41,6 +42,8 @@ const filteredVideos =  videos.filter(video =>
     </li>))}
             </ul>
         </div>
+        <div className={s.affte}></div>
+        </>
     );
 };
 
