@@ -99,7 +99,7 @@ console.log(link);
         value={title}
         />
       </label>
-      <button  type="submit">Додати відео</button>
+      <button className={s.button}  type="submit">Додати відео</button>
                 </form>  
             </div>
           

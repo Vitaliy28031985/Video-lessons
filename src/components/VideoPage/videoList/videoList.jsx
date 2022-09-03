@@ -41,7 +41,9 @@ const filteredVideos =  videos.filter(video =>
     </div>
     </li>))}
             </ul>
+            <p className={s.lenghtVideo}>{`Кількість відео: ${filteredVideos.length}`}</p>
         </div>
+        
         <div className={s.affte}></div>
         </>
     );

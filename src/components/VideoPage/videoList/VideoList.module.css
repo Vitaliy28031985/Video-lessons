@@ -58,7 +58,6 @@ img {
 }
 
 .cartTitle {
-
     font-size: 10px;
     text-align: center;
     }
@@ -79,6 +78,11 @@ img {
     }
 
     .affte {
-        border-top: 1px solid black;;
+        border-top: 1px solid white;
         padding: 20px;  
+    }
+
+    .lenghtVideo {
+        font-size: 20px;
+    text-align: center; 
     }
