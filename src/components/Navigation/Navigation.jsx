@@ -1,5 +1,6 @@
 
 import { NavLink } from 'react-router-dom';
+import {VideoFilter} from '../VideoPage/videoFilter/VideoFilter'
 import s from './Navigation.module.css';
 
 export default function Navigation() {
@@ -15,5 +16,6 @@ export default function Navigation() {
      `${s.list}` + (isActive ? ` ${s.carrentColor}` : '')}
     to='/video'>Video lessons</NavLink>
     </nav>
+    <VideoFilter/>
 </div>);
 };

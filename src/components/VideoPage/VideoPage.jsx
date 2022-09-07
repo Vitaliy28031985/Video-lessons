@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {VideoList} from './videoList/videoList';
-import {VideoFilter} from './videoFilter/VideoFilter';
+// import {VideoFilter} from './videoFilter/VideoFilter';
 import {VideoModal} from './VideoModal/VideoModal';
 import {LoaderComponent} from '../Loader/Loader';
 import {useGetVideosQuery} from '../../redux/videoSlice';
@@ -21,10 +21,11 @@ const handleTogle = () => {
 return (
 <div className={s.container}>
  {togle && (<VideoModal onClose={handleTogle} />)}
-
+ <button className={svp.button} type="button" onClick={handleTogle}>
+Добавити відео</button>
 <div className={svp.videoPage}>
-<VideoFilter/>
-<button className={svp.button} type="button" onClick={handleTogle}>+</button>
+{/* <VideoFilter/> */}
+
 {isLoading ? (<LoaderComponent/>) : (<VideoList/>)}
 
 </div>

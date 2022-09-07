@@ -1,10 +1,12 @@
 .lable {
-    position:fixed;
-    right: 1520px;
+    /* position:fixed;
+    right: 1520px; */
+    margin-left: 700px;
     font-Size: 20px;
     }
 .input {
-    position: fixed;
-    left: 20px;
+    /* position: fixed;
+    left: 20px; */
+    margin-left: 10px;
     font-Size: 20px;
  }
