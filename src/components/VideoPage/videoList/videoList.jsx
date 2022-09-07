@@ -4,6 +4,7 @@ import s from './VideoList.module.css';
 import {useDeleteVideoMutation, useGetVideosQuery} from '../../../redux/videoSlice';
 import {getFilterList} from '../../../redux/selectors';
 
+
 export const VideoList = () => {
 
 
@@ -17,7 +18,9 @@ const normalizeFilter = filter.toLowerCase();
 const filteredVideos =  videos.filter(video =>
     video.title.toLowerCase().includes(normalizeFilter));
 
-    return (
+  
+
+    return   (
         <>
         <div className={s.conteiner}>
     <ul className={s.listConteiner}>

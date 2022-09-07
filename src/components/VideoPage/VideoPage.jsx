@@ -17,6 +17,7 @@ const handleTogle = () => {
     setTogle(togle => !togle);
 };
 
+
 return (
 <div className={s.container}>
  {togle && (<VideoModal onClose={handleTogle} />)}
