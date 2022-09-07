@@ -10,11 +10,11 @@ export default function Navigation() {
     <NavLink
      className={({ isActive }) =>
      `${s.list}` + (isActive ? ` ${s.carrentColor}` : '')}
-    to='/'>Home</NavLink>
+    to='/'>Домашня</NavLink>
     <NavLink
      className={({ isActive }) =>
      `${s.list}` + (isActive ? ` ${s.carrentColor}` : '')}
-    to='/video'>Video lessons</NavLink>
+    to='/video'>Відео уроки</NavLink>
     </nav>
     <VideoFilter/>
 </div>);
