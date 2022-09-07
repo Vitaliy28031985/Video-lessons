@@ -22,6 +22,7 @@
     padding: 20px;
     margin-left: -40px;
     margin-right: -20px;
+    padding: 50px;
  }
  
  .input {
@@ -35,7 +36,8 @@
  }
 
  .button {
-  font-Size: 20px;
+  font-Size: 15px;
+  padding: 5px;
   background-color: rgb(57, 51, 51);
   color: azure;
   border: 0;

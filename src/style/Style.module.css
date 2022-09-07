@@ -19,14 +19,14 @@ img {
 }
 
 
-.wrapper {
+/* .wrapper {
     position: relative;
 	min-height: 100%;
 }
 
 .footer {
     flex: 1 1 auto;
-}
+} */
 .container {
     position: relative;
     padding-left: 15px;
