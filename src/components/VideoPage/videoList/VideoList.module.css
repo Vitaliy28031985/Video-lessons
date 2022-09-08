@@ -28,9 +28,12 @@ img {
 
 .listEl {
     margin-left: 30px;
+    padding-right: 0;
     margin-bottom: 30px;
     flex-basis: calc((100% - 90px) / 3);
 }
+
+
 .conteiner {
     padding-bottom: 20px;
     margin-bottom: 20px;
@@ -39,7 +42,16 @@ img {
 .cartConteiner {
     border: 1px solid black;
     width: 300px;
+    padding-right: 0;
 }
+
+.cartConteiner:hover, .cartConteiner:focus {
+    background-color: bisque;
+    color: red;
+    border: 0;
+    box-shadow:1px 1px 1px bisque, 1px 1px 1px red;
+}
+
 
 .cartConteinerTitle {
     display: flex;
@@ -56,6 +68,9 @@ img {
     margin-left: 20px;
     width: 260px;
 }
+
+
+
 
 .cartTitle {
     font-size: 10px;
