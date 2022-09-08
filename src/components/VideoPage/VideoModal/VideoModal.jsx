@@ -48,6 +48,9 @@ export const VideoModal = ({onClose}) => {
 
 const handleBackdropSubmit = e => {
     e.preventDefault();
+    
+if (link === '') {return alert('Введіть будь ласка посилання');}
+if (title === '') {return alert('Введіть будь ласка заголовок');}
 
    
     if (videos.find(video => video.link === link)) {

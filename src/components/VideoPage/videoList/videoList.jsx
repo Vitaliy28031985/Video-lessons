@@ -8,6 +8,7 @@ import {VideoListModal } from './VideoListModal/videoListModal';
 
 
 export const VideoList = () => {
+    
 const [togle, setTogle] = useState(false);
 const [evLink, setEvLink] = useState('');
 
@@ -31,9 +32,6 @@ const filteredVideos =  videos.filter(video =>
       handleTogle();
     } 
 
-  console.log(evLink);
-  console.log(togle);
-
     return   (
         <>
         <div className={s.conteiner}>
@@ -47,7 +45,8 @@ const filteredVideos =  videos.filter(video =>
      key={id} 
      id={id}
      className={s.listEl}>
-    <div onClick={() => hendleEvLink(id)} className={s.cartConteiner}>
+    <div  className={s.cartConteiner}>
+    <button className={s.buttonBig} onClick={() => hendleEvLink(id)} type="button">&#x21D4;</button>
     <iframe 
     className={s.cartVideo}
     src={`${link}?fs=1`} title={title}>{title}</iframe>
@@ -56,7 +55,7 @@ const filteredVideos =  videos.filter(video =>
     <button className={s.cartButton} 
     onClick={() => onDeleteVideo(id)}
     type="button">
-    X</button>
+    &times;</button>
     </div>
     </div>
     </li>))}

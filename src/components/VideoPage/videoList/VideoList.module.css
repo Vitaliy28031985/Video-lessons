@@ -35,6 +35,7 @@ img {
 
 
 .conteiner {
+   
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
@@ -45,12 +46,12 @@ img {
     padding-right: 0;
 }
 
-.cartConteiner:hover, .cartConteiner:focus {
+/* .cartConteiner:hover, .cartConteiner:focus {
     background-color: bisque;
     color: red;
     border: 0;
     box-shadow:1px 1px 1px bisque, 1px 1px 1px red;
-}
+} */
 
 
 .cartConteinerTitle {
@@ -63,23 +64,25 @@ img {
 }
 
 .cartVideo {
-    margin-top: 20px;
+    margin-top: 5px;
     margin-bottom: 10px;
     margin-left: 20px;
     width: 260px;
 }
 
 
-
-
 .cartTitle {
+    font-family: 'Raleway';
+    font-weight: 600;
     font-size: 10px;
     text-align: center;
     }
 
     .cartButton {
-        margin-left: 5px;
-        border-radius: 50%;
+        font-family: 'Raleway';
+        font-weight: 800;
+        margin-left: auto;
+        border-radius: 5px;
         margin-bottom: 10px;
         border: 0;
         background-color: red;
@@ -98,6 +101,22 @@ img {
     }
 
     .lenghtVideo {
-        font-size: 20px;
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 20px;
     text-align: center; 
+    }
+    .buttonBig {
+        font-family: 'Raleway';
+        font-weight: 800;
+       margin-left: 268px;
+       border: 0;
+       background-color: red;
+       color: azure;
+    }
+
+    .buttonBig:hover, .buttonBig:focus {
+        background-color: azure;  
+        color: red;
+        box-shadow:1px 1px 1px bisque, 1px 1px 1px red;
     }
