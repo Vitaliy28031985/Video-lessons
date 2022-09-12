@@ -35,7 +35,7 @@ img {
 
 
 .conteiner {
-   
+ 
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
@@ -45,14 +45,6 @@ img {
     width: 300px;
     padding-right: 0;
 }
-
-/* .cartConteiner:hover, .cartConteiner:focus {
-    background-color: bisque;
-    color: red;
-    border: 0;
-    box-shadow:1px 1px 1px bisque, 1px 1px 1px red;
-} */
-
 
 .cartConteinerTitle {
     display: flex;

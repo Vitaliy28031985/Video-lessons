@@ -1,4 +1,6 @@
 .conteiner {
+   margin-left: auto;
+   margin-right: auto;
    display: flex;
     padding: 20px;
     margin-bottom: 30px;
@@ -10,7 +12,8 @@
  }
  
 .linkComteiner {
-    margin-left: 350px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
  .list {

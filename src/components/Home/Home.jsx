@@ -1,5 +1,4 @@
 import video from '../../images/video.PNG';
-
 import s from '../../style/Style.module.css';
 import sh from './Home.module.css'
 
